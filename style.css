@@ -1,5 +1,62 @@
+/* WHOLE PAGE */
+/* Sets the background, font, and removes the browser's default margin */
 body {
-  background: black;
-  color: lime;
+  margin: 0;
+  background: #cfefff;
   font-family: monospace;
+  color: #444;
+}
+
+
+/* MAIN WEBSITE GRID */
+/* Creates: left sidebar | center content | right sidebar */
+.page-layout {
+  display: grid;
+
+  /* Left = 220px, center = flexible, right = 220px */
+  grid-template-columns: 220px 1fr 220px;
+
+  /* Space between the three columns */
+  gap: 10px;
+
+  /* Keeps the website from becoming ridiculously wide */
+  max-width: 1200px;
+
+  /* Centers the whole layout */
+  margin: 20px auto;
+
+  /* Adds space around the outer edges */
+  padding: 10px;
+}
+
+
+/* EACH LITTLE WINDOW / PANEL */
+/* Gives every box the old-web bordered-panel look */
+.box {
+  background: white;
+  border: 2px solid #8ecae6;
+
+  /* Space inside each box */
+  padding: 12px;
+
+  /* Space underneath each box */
+  margin-bottom: 10px;
+}
+
+
+/* BOX HEADINGS */
+/* Makes headings look like little title bars */
+.box h1,
+.box h2 {
+  margin-top: 0;
+  background: #bde0fe;
+  padding: 6px;
+}
+
+
+/* NAVIGATION LINKS */
+/* Makes sidebar links stack vertically */
+.left-sidebar a {
+  display: block;
+  padding: 5px;
 }
